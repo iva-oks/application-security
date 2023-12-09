@@ -1,0 +1,14 @@
+1) Запит на отримання токену:
+
+curl --request POST \  
+--url 'https://kpi.eu.auth0.com/oauth/token' \ 
+ --header 'content-type: application/x-www-form-urlencoded' \ 
+ --data 'audience=https://kpi.eu.auth0.com/api/v2/&grant_type=client_credentials&client_id=JIvCO5c2IBHlAe2patn6l6q5H35qxti0&client_secret=ZRF8Op0tWM36p1_hxXTU-B0K_Gq_-eAVtlrQpY24CasYiDmcXBhNS6IJMNcz1EgB'
+
+2) Створення користувача:
+
+curl -L 'https://kpi.eu.auth0.com/api/v2/users' \
+ -H 'Content-Type: application/json' \
+ -H 'authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjVCZTlBZFhrMERaUjhmR1dZYjdkViJ9.eyJpc3MiOiJodHRwczovL2twaS5ldS5hdXRoMC5jb20vIiwic3ViIjoiSkl2Q081YzJJQkhsQWUycGF0bjZsNnE1SDM1cXh0aTBAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8va3BpLmV1LmF1dGgwLmNvbS9hcGkvdjIvIiwiaWF0IjoxNzAxNDY0MDM5LCJleHAiOjE3MDE1NTA0MzksImF6cCI6IkpJdkNPNWMySUJIbEFlMnBhdG42bDZxNUgzNXF4dGkwIiwic2NvcGUiOiJyZWFkOnVzZXJzIGNyZWF0ZTp1c2VycyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.R14-lJxp8vk55wDTj8bG379EuZ97EWSH4a_OrpX2RI2L00f40oj_5j1x4ctvR6I7o9aHYERztkoZhtIdoUAVF9JxPSXzoqfbbw0PoU0D37OsRIPdJMa62AqYroONAbrf9CIOO355Fkwye-2WjI__NGzqufnIA_WkNjkpL8eBpm4pNlnQcJ4CVLzdUh6RfW6F-14TtCEGgsUDPxErnxf9nCB6q8zOU_PyQaBdnaiR4psyE_eXB11PbKEH5QGyl-t2Hu4bGOs3MTPCtTbToL-aN3pMVSLHi4_XzDkF1nPrkL506Eik7g_wDVpdbG8RlGVsLgIRq_1cofZ9BwWVedNyMg ' \
+ -H 'Accept: application/json' \
+ -d '{"email":"ivanytska@gmail.com","user_metadata":{},"blocked":false,"email_verified":false,"app_metadata":{},"given_name":"Oksana","family_name":"Ivanytska","name":"Oksana","user_id":"1","connection":"Username-Password-Authentication","password":"1234QWEee_","verify_email":false}'
